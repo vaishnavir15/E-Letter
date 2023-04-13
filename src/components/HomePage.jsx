@@ -9,6 +9,7 @@ import { Route,Routes } from "react-router-dom";
 import React from 'react';
 import Navbar  from "./Navbar.jsx"
 import EmailWIcon from './images/EmailWIcon.png'
+import '../styles.css'
 
 function HomePage() {
     return (
@@ -17,15 +18,20 @@ function HomePage() {
         <div>
             <header>
                 <Navbar></Navbar>
-                <hr></hr>
-                <h1>E-Letters</h1>
+                <h1 class="middle title">E-Letters</h1>
             </header>
             <section>
-                <img src= {EmailWIcon} width="250" alt=""></img>
-                <h3>Start creating your very own E-Letter now! Click the button below</h3>
-                <Link to="/PickImage">
-                    <button>Let's create</button>
-                </Link>
+                <div class="middle"> 
+                    <img src= {EmailWIcon} width="250" alt=""></img>
+                </div>
+                
+                <h3 class="middle">Start creating your very own E-Letter now! Click the button below</h3>
+                <div class="middle">
+                    <Link to="/PickImage">
+                        <button>Let's create</button>
+                    </Link>
+                </div>
+                
                 
             </section>
             <Routes>

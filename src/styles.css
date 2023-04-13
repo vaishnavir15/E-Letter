@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+html{
+    background-color: #faebd7;
+}
+.nav{
+    background-color: #cd853f;
+    text-align:center;
+    font-size: 1.1em;
+}
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    display: inline-block;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.3em
+    
+}
+.main-header li{
+    padding:0 5%
+}
+.nav a:hover{
+    background-color: rgba(255,255,255,.3)
+}
+
+
+
+
+
+
