@@ -18,15 +18,20 @@ function HomePage() {
         <div>
             <header>
                 <Navbar></Navbar>
+                <div class="upside-down-triangle">
+                </div>
                 <h1 class="middle title">E-Letters</h1>
+                
+                
             </header>
+            
             <section>
-                <div class="middle"> 
+                <div class="middle-over home-icon"> 
                     <img src= {EmailWIcon} width="250" alt=""></img>
                 </div>
                 
-                <h3 class="middle">Start creating your very own E-Letter now! Click the button below</h3>
-                <div class="middle">
+                <h3 class="middle subtext">Start creating your very own E-Letter now! Click the button below</h3>
+                <div class="middle sub-button">
                     <Link to="/PickImage">
                         <button>Let's create</button>
                     </Link>
@@ -34,6 +39,11 @@ function HomePage() {
                 
                 
             </section>
+            <footer class= "footer">
+                <div>
+
+                </div>
+            </footer>
             <Routes>
                 <Route path="/PickImage" component={CreateInitialPage} />
                 <Route path="/test" component={TestPage} />

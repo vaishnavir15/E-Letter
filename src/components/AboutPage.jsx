@@ -9,12 +9,16 @@ function AboutPage() {
         <div>
             <header>
                 <Navbar> </Navbar>
-                <hr></hr>
-                <h1>E-Letters</h1>
+                
+                
             </header>
             <section>
-                <h2>ABOUT</h2>
-                <hr></hr>
+                <div class="yellow-header">
+                    <h1 class="middle">E-Letters</h1>
+                    <h2 class="middle">ABOUT</h2>
+                    <hr></hr>
+                </div>
+                
                 <div>
                     <div>
                         <img src= {SpeechRight} width="250" alt=""></img>

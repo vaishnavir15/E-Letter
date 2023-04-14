@@ -1,3 +1,4 @@
+/*
 *{
     margin:0;
     padding:0;
@@ -8,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; 
 }
 html{
     background-color: #faebd7;
@@ -25,7 +27,8 @@ html{
     display: inline-block;
     padding: 1em;
     text-decoration: none;
-    font-size: 1.3em
+    font-size: 1.3em;
+    color:black;
     
 }
 .main-header li{
@@ -35,6 +38,189 @@ html{
     background-color: rgba(255,255,255,.3)
 }
 
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 200, 0, 0.5);
+}
+
+.upside-down-triangle {
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-top: 250px solid rgba(255,200,0,0.5);
+}
+
+
+.middle-over {
+position: absolute;
+top: 40%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.middle img {
+    margin-top: 20px; 
+}
+  
+.middle.subtext{
+    margin-top: 130px;
+}
+
+.middle.sub-button {
+    margin-top: 30px;
+}
+.middle-over.home-icon img{
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+
+.middle.sub-button button {
+    border-radius: 50px; 
+    border: 1px solid black;
+    padding: 15px 30px; 
+    font-size: 1.3rem;
+}
+
+.upside-down-triangle h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.middle.title {
+    position: fixed;
+    z-index: 1;
+    margin-top:-220px;
+    left:0;
+    right:0;
+}
+  
+.yellow-header{
+    background-color: rgba(255,200,0,0.5);
+    text-align:center;
+}
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.middle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+html{
+    background-color: #faebd7;
+}
+
+.nav{
+    background-color: #cd853f;
+    text-align: center;
+    font-size: 1.1vw; /* use vw for font-size */
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    display: inline-block;
+    padding: 1em;
+    text-decoration: none;
+    font-size: 1.3vw; /* use vw for font-size */
+    color: black;
+}
+
+.main-header li{
+    padding: 0 5%;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7vh; /* use vh for height */
+    background-color: rgba(255, 200, 0, 0.5);
+}
+
+.upside-down-triangle{
+    position: relative;
+    width: 100%;
+    height: 0;
+    border-left: 50vw solid transparent; /* use vw for borders */
+    border-right: 50vw solid transparent; /* use vw for borders */
+    border-top: 25vh solid rgba(255, 200, 0, 0.5); /* use vh for borders */
+}
+
+
+
+.middle.subtext{
+    margin-top: 32vh; /* use vh for margin */
+}
+
+.middle.sub-button{
+    margin-top: 5vh; /* use vh for margin */
+}
+
+.middle-over.home-icon img{
+    border-radius: 30%;
+    margin-top: 1vh; 
+    border: 0.1vw solid black; 
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.middle.sub-button button{
+    border-radius: 5vw; /* use vw for border-radius */
+    border: 0.1vw solid black; /* use vw for border-width */
+    padding: 1.5vh 3vw; /* use vw and vh for padding */
+    font-size: 1.3vw; /* use vw for font-size */
+}
+
+.upside-down-triangle h1{
+    position: relative;
+    z-index: 2;
+}
+
+.middle.title{
+    position: fixed;
+    z-index: 1;
+    margin-top: -22vh; /* use vh for margin */
+    left: 0;
+    right: 0;
+}
+
+.yellow-header{
+    background-color: rgba(255, 200, 0, 0.5);
+    text-align: center;
+}
+
+
+
+
+
+
+  
+  
 
 
 
