@@ -4,77 +4,63 @@ import SpeechRight from './images/SpeechRight.png'
 import BottomLeftSpeech from './images/BottomLeftSpeech.png'
 import BottomRightSpeech from './images/BottomRightSpeech.png'
 import Navbar from './Navbar';
+import '../styles.css'
+import React from 'react';
+
 function AboutPage() {
     return (
         <div>
             <header>
-                <Navbar> </Navbar>
-                
-                
+                <Navbar> </Navbar> 
             </header>
             <section>
                 <div class="yellow-header">
-                    <h1 class="middle">E-Letters</h1>
-                    <h2 class="middle">ABOUT</h2>
-                    <hr></hr>
+                    <h1 class="middle about-title">E-Letters</h1>
+                    <h2 class="middle about">ABOUT</h2>
                 </div>
                 
                 <div>
-                    <div>
+                    <div class= "container-left-top">
                         <img src= {SpeechRight} width="250" alt=""></img>
                     </div>
-                    <div>
-                        <p>
-                            Ever wanted to send someone a message with a picture with some flare? 
-                        </p>
-                    </div>
                 </div>
                 
                 <div>
-                    <div>
+                    <div class="container-right-top">
                         <img src= {SpeechLeft} width="250" alt=""></img>
-                    </div>
-                    <div>
-                        <p>
-                            Ever wanted to send a cute note? 
-                            <br></br>
-                            Ever wanted to send a personalized meme? 
-                        </p>
+                        
                     </div>
                 </div>
                 
-                <img src= {EmailIcon} width="250" alt=""></img>
+                <img src= {EmailIcon} width="200" class ="about-icon middle" alt=""></img>
                 <div>
-                    <div>
+                    <div class="container-left-bottom">
                         <img src= {BottomLeftSpeech} width="250" alt=""></img>
-                    </div>
-                    <div>
-                        <p>
-                            E-Letters was created for those purposes. 
-                        </p>
+                        
+                        
                     </div>
                 </div>
                 
                 <div>
-                    <div>
+                    <div class="container-right-bottom">
                         <img src= {BottomRightSpeech} width="250" alt=""></img>
-                    </div>
-                    <div>
-                        <p>
-                            This is a website for users to send cute photos + text to email to their friends. 
-                        </p>
+                        
                     </div>
                 </div>
-                <hr></hr>
-                <p>
-                    Just follow the prompts. 
-                    It is that simple.
-                </p>   
+                  
                 
                 
 
                 
             </section>
+            <footer class= "footer middle">
+                <div>
+                    <p>
+                        Just follow the prompts. 
+                        It is that simple.
+                    </p> 
+                </div>
+            </footer>
         </div>
     
     )

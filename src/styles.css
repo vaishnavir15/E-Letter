@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -110,7 +111,7 @@ html{
 }
 
 .middle.title{
-    position: fixed;
+    position: absolute;
     z-index: 1;
     margin-top: -15vh; /* use vh for margin */
     left: 0;
@@ -122,6 +123,88 @@ html{
     background-color: rgba(255, 200, 0, 0.5);
     text-align: center;
 }
+
+.middle.about-title{
+    position: relative;
+    z-index: 1;
+    margin-top: 7vh; /* use vh for margin */
+    left: 0;
+    right: 0;
+    font-size: calc(2vw + 2vh); 
+}
+
+.middle.about{
+    position: relative;
+    z-index: 1;
+    margin-top: 1vh; /* use vh for margin */
+    left: 0;
+    right: 0;
+    font-size: calc(1vw + 1vh);
+}
+
+.container-left-top{
+    position:relative;
+}
+.container-left-bottom{
+    position:relative;
+}
+.container-right-top{
+    position:relative;
+}
+.container-right-bottom{
+    position:relative;
+}
+.container-left-top img {
+    display: block; 
+    position: absolute;
+    top: 2vh; /* adjust the top position as needed */
+    left: 2vw; /* adjust the left position as needed */
+    margin: 0 auto; 
+}
+.container-right-top img {
+    display: block; 
+    position: absolute;
+    top: 2vh; /* adjust the top position as needed */
+    right: 2vw; /* adjust the left position as needed */
+}
+
+.container-left-bottom img {
+    display: block; 
+    position: absolute;
+    bottom: -60vh; /* adjust the top position as needed */
+    left: 2vw; /* adjust the left position as needed */
+}
+
+.container-right-bottom img {
+    display: block; 
+    position: absolute;
+    bottom: -59vh; /* adjust the top position as needed */
+    right: 2vw; /* adjust the left position as needed */
+}
+
+  
+
+
+
+.about-icon{
+    border-radius: 30%;
+    margin-top: 1vh; 
+    border: 0.1vw solid black; 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.footer p{
+    text-align: center;
+    font-size: calc(1vw + 1.5vh)
+}
+
+  
+
+  
 
 
 
