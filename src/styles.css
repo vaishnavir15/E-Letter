@@ -1,112 +1,3 @@
-/*
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-}
-
-.middle{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; 
-}
-html{
-    background-color: #faebd7;
-}
-.nav{
-    background-color: #cd853f;
-    text-align:center;
-    font-size: 1.1em;
-}
-.nav li{
-    display: inline;
-}
-
-.nav a{
-    display: inline-block;
-    padding: 1em;
-    text-decoration: none;
-    font-size: 1.3em;
-    color:black;
-    
-}
-.main-header li{
-    padding:0 5%
-}
-.nav a:hover{
-    background-color: rgba(255,255,255,.3)
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 50px;
-    background-color: rgba(255, 200, 0, 0.5);
-}
-
-.upside-down-triangle {
-    position: relative;
-    width: 100%;
-    height: 0;
-    border-left: 50vw solid transparent;
-    border-right: 50vw solid transparent;
-    border-top: 250px solid rgba(255,200,0,0.5);
-}
-
-
-.middle-over {
-position: absolute;
-top: 40%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
-.middle img {
-    margin-top: 20px; 
-}
-  
-.middle.subtext{
-    margin-top: 130px;
-}
-
-.middle.sub-button {
-    margin-top: 30px;
-}
-.middle-over.home-icon img{
-    border-radius: 50%;
-    border: 1px solid black;
-}
-
-
-.middle.sub-button button {
-    border-radius: 50px; 
-    border: 1px solid black;
-    padding: 15px 30px; 
-    font-size: 1.3rem;
-}
-
-.upside-down-triangle h1 {
-    position: relative;
-    z-index: 2;
-}
-
-.middle.title {
-    position: fixed;
-    z-index: 1;
-    margin-top:-220px;
-    left:0;
-    right:0;
-}
-  
-.yellow-header{
-    background-color: rgba(255,200,0,0.5);
-    text-align:center;
-}
-*/
-
 *{
     margin: 0;
     padding: 0;
@@ -124,23 +15,39 @@ html{
     background-color: #faebd7;
 }
 
-.nav{
+.nav {
     background-color: #cd853f;
+    display: flex; /* add display: flex; */
+    flex-direction: column; /* make the flex direction column */
+    justify-content: center; /* vertically center the nav links */
     text-align: center;
-    font-size: 1.1vw; /* use vw for font-size */
+    font-size: 1.1vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(7vh + 0.5vw);
+    z-index: 1;
 }
 
-.nav li{
-    display: inline;
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav a{
+.nav li {
     display: inline-block;
-    padding: 1em;
+}
+
+.nav a {
+    display: block; /* change display to block */
+    padding: 2em 1.5em;
     text-decoration: none;
-    font-size: 1.3vw; /* use vw for font-size */
+    font-size: 3vh 3vw;
     color: black;
 }
+  
 
 .main-header li{
     padding: 0 5%;
@@ -155,9 +62,11 @@ html{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 7vh; /* use vh for height */
+    height: calc(7vh + 0.5vw); /* use both vh and vw */
     background-color: rgba(255, 200, 0, 0.5);
+    margin-top: 10vh;
 }
+
 
 .upside-down-triangle{
     position: relative;
@@ -166,16 +75,18 @@ html{
     border-left: 50vw solid transparent; /* use vw for borders */
     border-right: 50vw solid transparent; /* use vw for borders */
     border-top: 25vh solid rgba(255, 200, 0, 0.5); /* use vh for borders */
+    top:7.5vh;
 }
 
 
 
 .middle.subtext{
-    margin-top: 32vh; /* use vh for margin */
+    margin-top: 35vh; /* use vh for margin */
+    font-size: calc(1vw + 1vh);  
 }
 
 .middle.sub-button{
-    margin-top: 5vh; /* use vh for margin */
+    margin-top: 7vh; /* use vh for margin */
 }
 
 .middle-over.home-icon img{
@@ -187,26 +98,24 @@ html{
     left: 50%;
     right: 50%;
     transform: translate(-50%, -50%);
+    
+    
 }
 
 .middle.sub-button button{
     border-radius: 5vw; /* use vw for border-radius */
     border: 0.1vw solid black; /* use vw for border-width */
     padding: 1.5vh 3vw; /* use vw and vh for padding */
-    font-size: 1.3vw; /* use vw for font-size */
-}
-
-.upside-down-triangle h1{
-    position: relative;
-    z-index: 2;
+    font-size: 1.6vw; /* use vw for font-size */
 }
 
 .middle.title{
     position: fixed;
     z-index: 1;
-    margin-top: -22vh; /* use vh for margin */
+    margin-top: -15vh; /* use vh for margin */
     left: 0;
     right: 0;
+    font-size: calc(2vw + 2vh); 
 }
 
 .yellow-header{

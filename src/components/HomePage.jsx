@@ -27,7 +27,7 @@ function HomePage() {
             
             <section>
                 <div class="middle-over home-icon"> 
-                    <img src= {EmailWIcon} width="250" alt=""></img>
+                    <img src= {EmailWIcon} width="200" alt=""></img>
                 </div>
                 
                 <h3 class="middle subtext">Start creating your very own E-Letter now! Click the button below</h3>
