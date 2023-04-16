@@ -18,62 +18,68 @@ return (
     <div>
         <header>
                 <Navbar> </Navbar>
-                <hr></hr>
-                <h1>E-Letters</h1>
+                <div class="yellow-header">
+                    <h1 class="middle about-title">E-Letters</h1>
+                    <h2 class="middle about">
+                        Pick an image
+                    </h2>
+                </div>     
         </header>
         <section>
-            <div>
-                <h2>
-                    Pick an image
-                </h2>
+            <div class="row">
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note1} alt=""></img>
+                    </Link>
+                </div>
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note2} alt=""></img>
+                    </Link>
+                </div>
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note3} alt=""></img>
+                    </Link>
+                </div>
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note4} alt=""></img>
+                    </Link>
+                </div>
             </div>
+
+            <div class="row">
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note5} alt=""></img>
+                    </Link>
+                </div>
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note6} alt=""></img>
+                    </Link>
+                </div>
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note7} alt=""></img>
+                    </Link>
+                </div>
+                <div class="column">
+                    <Link to= "/TypeMessage">
+                        <img src={Note8} alt=""></img>
+                    </Link>
+                </div>
+            </div>
+
         </section>
-        <section>
-            <div>
+        <footer class= "footer middle">
                 <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note1} width="250" alt=""></img>
-                    </Link>
+                    <p>
+                        Scroll and click the desired image for the email.
+                    </p> 
                 </div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note2} width="250" height= "300"alt=""></img>
-                    </Link>
-                </div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note3} width="250" height= "300"alt=""></img>
-                    </Link>
-                </div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note4} width="250" alt=""></img>
-                    </Link>
-                </div>
-            </div>
-            <div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note5} width="250" height= "300"alt=""></img>
-                    </Link>
-                </div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note6} width="250" alt=""></img>
-                    </Link>
-                </div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note7} width="250" alt=""></img>
-                    </Link>
-                </div>
-                <div>
-                    <Link to= "/TypeMessage">
-                        <img src= {Note8} width="250" alt=""></img>
-                    </Link>
-                </div>
-            </div>
-        </section>
+        </footer>
         <Routes>
                 <Route path="/TypeMessage" component={CreateTextPage} /> 
         </Routes>

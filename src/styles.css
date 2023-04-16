@@ -217,6 +217,23 @@ html{
     margin-top: 26vh; /* use vh for margin */
 }
 
+.column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+  }
+
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+.row img{
+    width: 20vw;
+    
+}
+  
 
   
 
