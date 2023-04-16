@@ -9,28 +9,46 @@ function CreateTextPage(){
         <div>
             <header>
                 <Navbar> </Navbar>
-                <hr></hr>
-                <h1>E-Letters</h1>
+                <div class="yellow-header">
+                    <h1 class="middle about-title">E-Letters</h1>
+                    <h2 class="middle about">
+                        Write your prompt
+                    </h2>
+                </div>
+                
             </header>
             <section>
-                <div>
-                    <img src= {Test} alt="" width= "300"></img>
-                </div>
-                <div>
+                <div class="row-message">
+                    <div class="column-message">
+                        <Link to= "/TypeMessage">
+                            <img src={Test} alt=""></img>
+                        </Link>
+                    </div>
+                    <div>
                     <p>
                         Type in your small message...
                     </p>
                     <div>
-                        <input type="text" placeholder="Message" maxLength="50"/>
+                        <input type="text" class="words" placeholder="Message" maxLength="50"/>
                     </div>
+                        </div>  
                 </div>
-                <div>
+                
+                
+                <div class="arrow">
                     <Link to= "/Email">
                         <img src= {Arrow} alt="" width="200"></img>
                     </Link>
                     
                 </div>
             </section>
+            <footer class="middle footer">
+                <div>
+                    <p>
+                        Click the arrow when you are happy with your message.
+                    </p>
+                </div>
+            </footer>
 
             <Routes>
                 <Route path="/Email" component={CreateTextPage} /> 
