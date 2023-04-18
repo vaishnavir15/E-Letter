@@ -267,6 +267,13 @@ html{
     display: block;
     width: 200px;
   }
+
+.send-email{
+    border-radius: 5vw; /* use vw for border-radius */
+    border: 0.1vw solid black; /* use vw for border-width */
+    padding: 1.5vh 3vw; /* use vw and vh for padding */
+    font-size: 1.6vw; /* use vw for font-size */
+}
   
 
 
