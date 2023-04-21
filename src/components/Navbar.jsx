@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 import "../styles.css"
 function Navbar(){
   return (
-    <header class="main-header">
-      <nav class="nav">
+    <header className="main-header">
+      <nav className="nav">
           <ul>
           <li><Link to="/">HOME</Link></li>
           <li><Link to="/About">ABOUT</Link></li>

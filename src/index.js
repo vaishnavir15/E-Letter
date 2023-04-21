@@ -23,27 +23,27 @@ const router = createBrowserRouter([
     element: <HomePage></HomePage>,
   },
   {
-    path: "test",
+    path: "/test",
     element: <TestPage></TestPage>,
   },
   {
-    path: "About",
+    path: "/About",
     element: <AboutPage></AboutPage>,
   },
   {
-    path: "Upload",
+    path: "/Upload",
     element: <UploadPage></UploadPage>,
   },
   {
-    path: "PickImage",
+    path: "/PickImage",
     element: <CreateInitialPage></CreateInitialPage>,
   },
   {
-    path: "TypeMessage",
+    path: "/TypeMessage",
     element: <CreateTextPage></CreateTextPage>,
   },
   {
-    path: "Email",
+    path: "/Email",
     element: <CreateEmailPage></CreateEmailPage>,
   },
 ]);

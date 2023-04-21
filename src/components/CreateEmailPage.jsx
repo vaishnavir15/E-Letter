@@ -6,37 +6,37 @@ function CreateEmailPage(){
         <div>
             <header>
                 <Navbar></Navbar>
-                <div class="yellow-header">
-                    <h1 class="middle about-title">E-Letters</h1>
-                    <h2 class="middle about">
+                <div className="yellow-header">
+                    <h1 className="middle about-title">E-Letters</h1>
+                    <h2 className="middle about">
                         Fill with emails
                     </h2>
                 </div>
             </header>
             <section>
-                <div class="column-message">
+                <div className="column-message">
                     <img src= {Test} width="250" alt=""></img>
                 </div>
-                <div class="column-message">
+                <div className="column-message">
                     <p>
                         Enter your email address...
                     </p>
                     <div>
-                        <input type="text" class="words" placeholder="email123@email.com"/>
+                        <input type="text" className="words" placeholder="email123@email.com"/>
                     </div>
                 </div>
-                <div class="column-message">
+                <div className="column-message">
                     <p>
                         Enter recipient's email address...
                     </p>
                     <div>
-                        <input type="text" class="words" placeholder="email123@email.com"/>
+                        <input type="text" className="words" placeholder="email123@email.com"/>
                     </div>
                 </div>
             </section>
-            <footer class="middle footer">
+            <footer className="middle footer">
                 <div>
-                    <button class="send-email">
+                    <button className="send-email">
                         SEND
                     </button>
                 </div>

@@ -9,24 +9,24 @@ function UploadPage(){
         <div>
             <header>
                 <Navbar></Navbar>
-                <div class="yellow-header">
-                    <h1 class="middle about-title">E-Letters</h1>
-                    <h2 class="middle about">UPLOAD</h2>
+                <div className="yellow-header">
+                    <h1 className="middle about-title">E-Letters</h1>
+                    <h2 className="middle about">UPLOAD</h2>
                 </div>
-                <div class="upside-down-triangle-upload">
+                <div className="upside-down-triangle-upload">
                 </div>
                 
             </header>
             <section>
-            <div class="middle-over home-icon"> 
+            <div className="middle-over home-icon"> 
                 <img src= {EmailSun} width="250" alt=""></img>
             </div>
-            <div class="middle sub-button-upload">
+            <div className="middle sub-button-upload">
                 <img src= {UploadButton} width="250" alt=""></img>
             </div>
                 
             </section>
-            <footer class="footer middle">
+            <footer className="footer middle">
                 <hr></hr>
                 <p>
                     Have cool photos you want others to be able to use? Upload them here for others to use!

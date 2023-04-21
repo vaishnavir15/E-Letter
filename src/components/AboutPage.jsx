@@ -14,27 +14,27 @@ function AboutPage() {
                 <Navbar> </Navbar> 
             </header>
             <section>
-                <div class="yellow-header">
-                    <h1 class="middle about-title">E-Letters</h1>
-                    <h2 class="middle about">ABOUT</h2>
+                <div className="yellow-header">
+                    <h1 className="middle about-title">E-Letters</h1>
+                    <h2 className="middle about">ABOUT</h2>
                 </div>
                 
                 <div>
-                    <div class= "container-left-top">
+                    <div className= "container-left-top">
                         <img src= {SpeechRight} width="250" alt=""></img>
                     </div>
                 </div>
                 
                 <div>
-                    <div class="container-right-top">
+                    <div className="container-right-top">
                         <img src= {SpeechLeft} width="250" alt=""></img>
                         
                     </div>
                 </div>
                 
-                <img src= {EmailIcon} width="200" class ="about-icon middle" alt=""></img>
+                <img src= {EmailIcon} width="200" className ="about-icon middle" alt=""></img>
                 <div>
-                    <div class="container-left-bottom">
+                    <div className="container-left-bottom">
                         <img src= {BottomLeftSpeech} width="250" alt=""></img>
                         
                         
@@ -42,7 +42,7 @@ function AboutPage() {
                 </div>
                 
                 <div>
-                    <div class="container-right-bottom">
+                    <div className="container-right-bottom">
                         <img src= {BottomRightSpeech} width="250" alt=""></img>
                         
                     </div>
@@ -53,7 +53,7 @@ function AboutPage() {
 
                 
             </section>
-            <footer class= "footer middle">
+            <footer className= "footer middle">
                 <div>
                     <p>
                         Just follow the prompts. 

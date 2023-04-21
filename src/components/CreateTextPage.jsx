@@ -4,45 +4,51 @@ import Test from "./images/Test.png"
 import Arrow from "./images/ArrowRight.png"
 import {Link} from 'react-router-dom'
 import { Route,Routes } from "react-router-dom";
-function CreateTextPage(){
+import { useLocation } from 'react-router-dom';
+import CreateEmailPage from "./CreateEmailPage";
+
+function CreateTextPage(props){
+    let location  = useLocation();
+
+    console.log(location.state.selectedImage)
+    const { selectedImage } = location.state;
+    
     return (
         <div>
             <header>
                 <Navbar> </Navbar>
-                <div class="yellow-header">
-                    <h1 class="middle about-title">E-Letters</h1>
-                    <h2 class="middle about">
+                <div className="yellow-header">
+                    <h1 className="middle about-title">E-Letters</h1>
+                    <h2 className="middle about">
                         Write your prompt
                     </h2>
                 </div>
                 
             </header>
             <section>
-                <div class="row-message">
-                    <div class="column-message">
-                        <Link to= "/TypeMessage">
-                            <img src={Test} alt=""></img>
-                        </Link>
+                <div className="row-message">
+                    <div className="column-message">
+                        <img src={selectedImage} alt=""></img> 
                     </div>
                     <div>
                     <p>
                         Type in your small message...
                     </p>
                     <div>
-                        <input type="text" class="words" placeholder="Message" maxLength="50"/>
+                        <input type="text" className="words" placeholder="Message" maxLength="50"/>
                     </div>
                         </div>  
                 </div>
                 
                 
-                <div class="arrow">
+                <div className="arrow">
                     <Link to= "/Email">
                         <img src= {Arrow} alt="" width="200"></img>
                     </Link>
                     
                 </div>
             </section>
-            <footer class="middle footer">
+            <footer className="middle footer">
                 <div>
                     <p>
                         Click the arrow when you are happy with your message.
@@ -51,7 +57,7 @@ function CreateTextPage(){
             </footer>
 
             <Routes>
-                <Route path="/Email" component={CreateTextPage} /> 
+                <Route path="/Email" component={CreateEmailPage} /> 
             </Routes>
         </div>
 
