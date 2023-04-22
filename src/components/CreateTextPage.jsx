@@ -27,17 +27,42 @@ function CreateTextPage() {
   function drawText() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-
+  
+    const maxWidth = canvas.width * 0.8; // 80% of the canvas width
+    const lineHeight = 60; // height of each line
+    const words = inputRef.current.value.split(' ');
+    let line = '';
+    const lines = [];
+  
     ctx.font = 'bold 48px Arial';
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'black';
     ctx.textAlign = 'center';
-
-    ctx.fillText(inputRef.current.value, canvas.width / 2, canvas.height / 2);
-
+  
+    for (let i = 0; i < words.length; i++) {
+      const testLine = line + words[i] + ' ';
+      const metrics = ctx.measureText(testLine);
+      const testWidth = metrics.width;
+      if (testWidth > maxWidth && i > 0) {
+        lines.push(line);
+        line = words[i] + ' ';
+      } else {
+        line = testLine;
+      }
+    }
+    lines.push(line);
+  
+    const x = canvas.width / 2;
+    const y = canvas.height / 2 - ((lines.length - 1) * lineHeight) / 2;
+  
+    for (let i = 0; i < lines.length; i++) {
+      ctx.fillText(lines[i], x, y + i * lineHeight);
+    }
+  
     // save the edited image as a variable
     const dataURL = canvas.toDataURL();
     setEditedImage(dataURL);
   }
+  
 
   function handleClick() {
     console.log(inputRef.current.value);
