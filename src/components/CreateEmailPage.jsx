@@ -1,7 +1,12 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import Test from "./images/Test.png"
 function CreateEmailPage(){
+    const location = useLocation();
+    const { editedImage } = location.state;
+    console.log(location.state)
+
+
     return(
         <div>
             <header>
@@ -15,7 +20,8 @@ function CreateEmailPage(){
             </header>
             <section>
                 <div className="column-message">
-                    <img src= {Test} width="250" alt=""></img>
+                    {editedImage && (
+                    <img src={editedImage} alt=""  />)}
                 </div>
                 <div className="column-message">
                     <p>

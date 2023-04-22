@@ -274,6 +274,23 @@ html{
     padding: 1.5vh 3vw; /* use vw and vh for padding */
     font-size: 1.6vw; /* use vw for font-size */
 }
+
+.button-arrow {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+.done-button{
+    width:45vw;
+    float: left;
+    
+    padding: 5px;
+
+}
+
+
+  
   
 
 
