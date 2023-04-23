@@ -1,22 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import Navbar from './Navbar';
-import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com';
+import imageCompression from 'browser-image-compression';
+
+
 function CreateEmailPage(){
     const location = useLocation();
     const { editedImage } = location.state;
     console.log(location.state)
 
-
-    function emailSend(e){
+    const [compressedImage, setCompressedImage] = useState(editedImage);
+      
+    async function emailSend(e){
         e.preventDefault();
         var params = {
             from_name: document.getElementsByName("from_name")[0].value,
             to_name: document.getElementsByName("to_name")[0].value,
-            from_email: document.getElementsByName("from_email")[0].value,
             to_email: document.getElementsByName("to_email")[0].value,
-            emailImage: document.getElementById("emailImage").value,
+            emailImage: compressedImage,
         }
+
         emailjs.send(
             'service_u1rp92l', 
             'template_g6ou55k', 
@@ -26,8 +30,21 @@ function CreateEmailPage(){
             console.log(res)
         }).catch(err=> console.log(err));
     }
-    
 
+    async function compressImage() {
+        try {
+            const options = {
+                maxSizeMB: .5,
+                maxWidthOrHeight: 1920,
+                useWebWorker: true
+            };
+
+            const compressedFile = await imageCompression(editedImage, options);
+            setCompressedImage(compressedFile);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return(
         <div>
@@ -43,8 +60,8 @@ function CreateEmailPage(){
             <section>
                 <form>
                     <div className="column-message">
-                        {editedImage && (
-                        <img src={editedImage} alt="" id="emailImage" />)}
+                        {compressedImage && (
+                        <img src={compressedImage} alt="" id="emailImage" onLoad={compressImage} />)}
                     </div>
                     <div className="column-message">
                         <p>
@@ -64,27 +81,13 @@ function CreateEmailPage(){
                     </div>
                     <div className="column-message">
                         <p>
-                            Enter your email address...
-                        </p>
-                        <div>
-                            <input type="text" className="email-input" name="from_email" placeholder="email123@email.com"/>
-                        </div>
-                    </div>
-                    <div className="column-message">
-                        <p>
                             Enter recipient's email address...
                         </p>
                         <div>
                             <input type="text" className="email-input" name="to_email" placeholder="email123@email.com"/>
                         </div>
                     </div>
-
-
-
-
-
                 </form>
-                
             </section>
             <footer className="middle footer">
                 <div>
