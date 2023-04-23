@@ -14,6 +14,14 @@ function CreateEmailPage(){
       
     async function emailSend(e){
         e.preventDefault();
+
+        // Validate email input
+        const emailInput = document.getElementsByName("to_email")[0].value;
+        const emailRegex = /\S+@\S+\.\S+/;
+        if (!emailRegex.test(emailInput)) {
+            alert("Invalid email address");
+            return;
+        }
         var params = {
             from_name: document.getElementsByName("from_name")[0].value,
             to_name: document.getElementsByName("to_name")[0].value,
@@ -27,7 +35,8 @@ function CreateEmailPage(){
             params, 
             'ZPzjjYB5M7rMX0_qa'
         ).then(res=>{
-            console.log(res)
+            console.log(res);
+            alert("Email sent successfully")
         }).catch(err=> console.log(err));
     }
 
