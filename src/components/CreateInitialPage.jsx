@@ -15,6 +15,13 @@ import Note5 from './images/Note5.jpg'
 import Note6 from './images/Note6.jpg'
 import Note7 from './images/Note7.jpg'
 import Note8 from './images/Note8.png'
+
+function importAll(r) {
+    return r.keys().map(r);
+  }
+  
+const images = importAll(require.context('../../server/uploads', false, /\.(png|jpe?g|svg)$/));
+
 function CreateInitialPage(){
     const image1 = Note1;
     const image2 = Note2;
@@ -50,6 +57,18 @@ return (
 
             <div className="row">
                 {[image5, image6, image7, image8].map((selectedImage) => {
+                    return (
+                        <div className="column">
+                            <Link to= {{ pathname: "/TypeMessage"}} state={{selectedImage}}>
+                                <img src={selectedImage} alt=""></img>
+                            </Link>
+                        </div>
+                    )
+                })}
+            </div>
+
+            <div className="row">
+                {images.map((selectedImage) => {
                     return (
                         <div className="column">
                             <Link to= {{ pathname: "/TypeMessage"}} state={{selectedImage}}>
