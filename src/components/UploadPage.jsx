@@ -1,10 +1,20 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from './Navbar';
 import UploadButton from './images/UploadButton.png'
 import EmailSun from './images/EmailSun.jpg'
 import '../styles.css'
+import axios from "axios"
 
 function UploadPage(){
+    const [fileInput, setFileInput] = useState(null);
+
+    function fileSelectedHandler(event)
+    {
+        console.log(event.target.files[0]);
+    }
+    function fileUploadHandler(){
+        fileInput.click();
+    }
     return(
         <div>
             <header>
@@ -21,8 +31,24 @@ function UploadPage(){
             <div className="middle-over home-icon"> 
                 <img src= {EmailSun} width="250" alt=""></img>
             </div>
+            <div>
+                <button className="pick-button" onClick={fileUploadHandler}>Pick </button>
+            </div>
+            <div>
+                <input 
+                style={{display:"none"}}
+                type="file" 
+                onChange={fileSelectedHandler}
+                ref={input => setFileInput(input)} >
+                
+                </input>
+                
+            </div>
             <div className="middle sub-button-upload">
-                <img src= {UploadButton} width="250" alt=""></img>
+                <button onClick={fileUploadHandler} className="button-upload">
+                    <img src= {UploadButton} width="250" alt=""></img>
+                </button>
+                
             </div>
                 
             </section>

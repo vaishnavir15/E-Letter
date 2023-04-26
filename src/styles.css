@@ -214,7 +214,24 @@ html{
 
 
 .middle.sub-button-upload{
-    margin-top: 26vh; /* use vh for margin */
+    margin-top: 28vh; /* use vh for margin */
+}
+
+.pick-button{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 33vh;
+    border-radius: 5vw; /* use vw for border-radius */
+    border: 0.1vw solid black; /* use vw for border-width */
+    padding: 1.5vh 3vw; /* use vw and vh for padding */
+    font-size: 2vw; /* use vw for font-size */
+}
+  
+.button-upload{
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .column {
