@@ -227,6 +227,18 @@ html{
     padding: 1.5vh 3vw; /* use vw and vh for padding */
     font-size: 2vw; /* use vw for font-size */
 }
+
+.your-own{
+    position: relative;
+    left: 50%;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    transform: translateX(-50%);
+    border-radius: 5vw; /* use vw for border-radius */
+    border: 0.1vw solid black; /* use vw for border-width */
+    padding: 1.5vh 3vw; /* use vw and vh for padding */
+    font-size: 2vw; /* use vw for font-size */
+}
   
 .button-upload{
     background: none;
@@ -315,6 +327,12 @@ html{
 .email-input-name{
     width: 45vw;
     height: 5vh;  
+}
+
+.display-image img{
+    position:relative;
+    width: 20vw; 
+
 }
 
 

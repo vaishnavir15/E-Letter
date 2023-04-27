@@ -36,24 +36,43 @@ function CreateEmailPage(){
             'ZPzjjYB5M7rMX0_qa'
         ).then(res=>{
             console.log(res);
+            console.log(compressedImage)
             alert("Email sent successfully")
         }).catch(err=> console.log(err));
     }
 
     async function compressImage() {
+        console.log(editedImage);
+        const base64Image= editedImage;
+        const binaryImage = atob(base64Image.split(',')[1]);
+        const binaryImageArray = new Uint8Array(binaryImage.length);
+        for (let i = 0; i < binaryImage.length; i++) {
+            binaryImageArray[i] = binaryImage.charCodeAt(i);
+        }
+        const blobImage = new Blob([binaryImageArray], {type: 'image/png'});
+        const fileImage = new File([blobImage], 'image.png', {type: 'image/png'});
+    
         try {
             const options = {
                 maxSizeMB: .5,
                 maxWidthOrHeight: 1920,
                 useWebWorker: true
             };
-
-            const compressedFile = await imageCompression(editedImage, options);
-            setCompressedImage(compressedFile);
+    
+            const compressedFile = await imageCompression(fileImage, options);
+            console.log(compressedFile);
+            const reader = new FileReader();
+            reader.readAsDataURL(compressedFile);
+            reader.onloadend = () => {
+                const compressedImageDataUrl = reader.result.toString();
+                setCompressedImage(compressedImageDataUrl);
+                console.log(compressedImageDataUrl);
+            };
         } catch (error) {
             console.log(error);
         }
     }
+    
 
     return(
         <div>
@@ -62,7 +81,7 @@ function CreateEmailPage(){
                 <div className="yellow-header">
                     <h1 className="middle about-title">E-Letters</h1>
                     <h2 className="middle about">
-                        Fill with emails
+                        Fill with information
                     </h2>
                 </div>
             </header>
@@ -70,7 +89,7 @@ function CreateEmailPage(){
                 <form>
                     <div className="column-message">
                         {compressedImage && (
-                        <img src={compressedImage} alt="" id="emailImage" onLoad={compressImage} />)}
+                        <img src={editedImage} alt="" id="emailImage" onLoad={compressImage} />)}
                     </div>
                     <div className="column-message">
                         <p>
@@ -110,4 +129,4 @@ function CreateEmailPage(){
     ); 
 }
 
-export default CreateEmailPage
+export default CreateEmailPage;
