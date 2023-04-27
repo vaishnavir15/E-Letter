@@ -43,7 +43,7 @@ function CreateEmailPage(){
 
     async function compressImage() {
         console.log(editedImage);
-        const base64Image= editedImage;
+        const base64Image=  editedImage;
         const binaryImage = atob(base64Image.split(',')[1]);
         const binaryImageArray = new Uint8Array(binaryImage.length);
         for (let i = 0; i < binaryImage.length; i++) {
